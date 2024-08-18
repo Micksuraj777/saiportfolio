@@ -1,10 +1,28 @@
+import Animation from '@/components/Animation'
+import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
   return (
-    <div className="flex text-4xl font-semibold justify-center items-center w-full h-screen relative z-[-1]  place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-      Welcome to Sai's portfolio
-    </div>
+    <section className="w-full mx-auto max-w-[1500px] h-screen bg-[#011627]">
+      <div className='flex justify-around items-center h-screen'>
+      <div className='animate-fade-down animate-once'>
+        <h1 className='text-white'>Hi all . I am</h1>
+        <h2 className='text-7xl text-white tracking-wider'>Sai Prasad</h2>
+        <h3 className='text-[#4D5BCE] text-3xl'>&gt; Full-Stack Developer</h3>
+        <div>
+          <p className='text-[#607B96] mt-6'>
+          // complete the game to continue
+          </p>
+          <p className='text-[#607B96]'>
+          // you can also see it on my Github page
+          </p>
+          <p className='text-[#4D5BCE]'>const&nbsp;&nbsp;<span className='text-green-500'>githublink</span><span className='text-white'>&nbsp;&nbsp;=&nbsp;&nbsp;</span><a href="/" target="_blank" className='text-[#FEA55F]'>“https://github.com/example/url”</a></p>
+        </div>
+      </div>
+      <Animation/>
+      </div>
+    </section>
   )
 }
 
