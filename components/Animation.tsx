@@ -3,8 +3,8 @@ import React from 'react'
 
 const Animation = () => {
   return (
-    <div className="">
-      <div className="animate-fade-up animate-once relative">
+    <div className="hidden md:block">
+      <div className="animate-fade-up animate-once animate-duration-[3000ms] relative">
         <Image 
           src="/code.svg" 
           alt='code' 

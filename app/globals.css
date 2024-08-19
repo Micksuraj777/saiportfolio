@@ -6,3 +6,18 @@
   font-family: var(--firacode);
 }
 
+.BorderR{
+  @apply border-r border-r-[#607B96];
+}
+
+.container{
+  @apply mx-auto max-w-[1500px];
+}
+.Text{
+  @apply text-[#607B96];
+}
+
+.Border{
+  @apply border border-[#607B96];
+}
+
