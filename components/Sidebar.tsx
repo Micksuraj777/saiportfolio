@@ -8,10 +8,10 @@ const contact = [
 
 const Sidebar = () => {
     return (
-      <section className="h-[90vh] Border gap-4 flex w-[21%] flex-col animate-fade-left animate-once">
+      <section className="h-[73vh] Border gap-4 flex w-[20.5%] flex-col animate-fade-left animate-once">
         <div className="w-full">
-          <div className="pb-3 border-b border-b-[#607B96] ">
-          <div className="border-b border-b-[#607B96] px-4 py-2 flex items-center gap-3">
+          <div className="pb-3 BorderB">
+          <div className="BorderB px-4 py-2 flex items-center gap-3">
             <Image src='/icons/arrow-drop-down.svg' alt="arrow" width={24} height={24}/>
             <h1 className="text-white">personal-info</h1>
           </div>

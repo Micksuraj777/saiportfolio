@@ -8,19 +8,19 @@ const content = [
   {cont:"* development lorem ipsum dolor sit amet," },
   {cont:"* consectetur adipiscing elit, sed do eiusmod"},
   {cont:"* tempor incididunt ut labore et dolore magna"},
-  {cont:"* aliqua. Ut enim ad minim veniam, quis nostrud"},
-  {cont:"* exercitation ullamco laboris nisi ut aliquip ex"},
+  {cont:"* aliqua. Ut enim ad minim veniam, quis "},
+  {cont:"* exercitation ullamco laboris nisi ut aliquip "},
   {cont:"* ea commodo consequat. Duis aute irure dolor"},
-  {cont:"* reprehenderit in voluptate velit esse cillum"},
-  {cont:"* dolore eu fugiat nulla pariatur. Excepteur sint"},
-  {cont:"* occaecat cupidatat non proident, sunt in culpa"},
-  {cont:"* qui officia deserunt mollit anim id est laborum."},
+  {cont:"* reprehenderit in voluptate velit esse "},
+  {cont:"* dolore eu fugiat nulla pariatur. Excepteur "},
+  {cont:"* occaecat cupidatat non proident, sunt in "},
+  {cont:"* qui officia deserunt mollit anim id est"},
   {cont:"*/"}
 ];
 
 const About = () => {
   return (
-    <section className="w-[35%] h-[90vh] Border absolute top-[50px] left-[25%] right-0 animate-fade-right animate-once">
+    <section className="w-[35%] h-[73vh] Border animate-fade-right animate-once">
       <section className="w-full h-full">
         <div className="BorderB">
           <div className="BorderR w-[35%] h-[40px] flex justify-center items-center gap-1">
@@ -33,7 +33,7 @@ const About = () => {
             />
           </div>
         </div>
-        <ul className="p-4">
+        <ul className="p-4 text-sm">
           {content.map((item,index=1) => (
             <li key={index} className="Text">
               {index+1}

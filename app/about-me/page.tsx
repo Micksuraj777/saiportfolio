@@ -5,8 +5,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <section className='h-screen pt-[50px] background'>
-      <div className='container flex'>
+    <section className='background'>
+      <div className='container mx-auto flex'>
       <Side/>
       <Sidebar/>
       <About/>

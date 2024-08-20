@@ -21,6 +21,10 @@
   @apply border border-[#607B96];
 }
 
+.BorderB{
+  @apply border-b border-b-[#607B96];
+}
+
 .background {
   @apply bg-[#011627];
 }
