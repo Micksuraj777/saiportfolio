@@ -1,10 +1,10 @@
-import About from "@/components/About";
-import Code from "@/components/Code";
-import Side from "@/components/Side";
-import Sidebar from "@/components/Sidebar";
-import React from "react";
+import About from '@/components/About';
+import Code from '@/components/Code';
+import Side from '@/components/Side';
+import Sidebar from '@/components/Sidebar';
+import React from 'react';
 
-const page = () => {
+const AboutMe = () => {
   return (
     <section className="background">
       <section className="container mx-auto flex hero-height">
@@ -16,11 +16,10 @@ const page = () => {
         <div className="pt-10 BorderR animate-fade-right animate-once">
           <div className="w-5 h-2 bg-[#607B96] mx-1"></div>
         </div>
-          <Code />
-          
+        <Code />
       </section>
     </section>
   );
 };
 
-export default page;
+export default AboutMe;
