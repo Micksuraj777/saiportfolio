@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fira_code.className}>
-      <body className="bg-black p-10 h-screen w-screen">
+      <body className="bg-black p-10 h-screen w-screen container">
         <Navbar />
         <main className="border border-[#607B96] border-y-0 hero-height">{children}</main>
         <Footer />

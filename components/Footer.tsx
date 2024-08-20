@@ -9,7 +9,7 @@ const socialMedia = [
 const Footer = () => {
   return (
     <footer className="w-full h-[50px] background Border rounded-b-lg">
-      <div className="grid grid-cols-[auto_auto_1fr_auto] w-full h-full container">
+      <div className="grid grid-cols-[auto_auto_1fr_auto] w-full h-full">
         <div className="BorderR items-center p-3">
           <h1 className="Text">find me in :</h1>
         </div>

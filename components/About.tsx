@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 const content = [
-  {  cont: "/**" },
-  {  cont: "* About me" },
+  {cont: "/**" },
+  {cont: "* About me" },
   {cont:"* I have 5 years of еxperience in web"},
   {cont:"* development lorem ipsum dolor sit amet," },
   {cont:"* consectetur adipiscing elit, sed do eiusmod"},
@@ -20,10 +20,10 @@ const content = [
 
 const About = () => {
   return (
-    <section className="w-[35%] h-[73vh] Border animate-fade-right animate-once">
-      <section className="w-full h-full">
+    <section className="w-fit Border animate-fade-right animate-once">
+      <section className="w-full h-full mr-10">
         <div className="BorderB">
-          <div className="BorderR w-[35%] h-[40px] flex justify-center items-center gap-1">
+          <div className="BorderR w-fit h-fit flex justify-center items-center gap-1 p-2">
             <h1 className="Text">personal-info</h1>
             <Image
               src="/icons/close-icon.svg"

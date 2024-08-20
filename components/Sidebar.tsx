@@ -8,8 +8,8 @@ const contact = [
 
 const Sidebar = () => {
     return (
-      <section className="h-[73vh] Border gap-4 flex w-[20.5%] flex-col animate-fade-left animate-once">
-        <div className="w-full">
+      <section className="Border gap-4 flex w-fit flex-col animate-fade-left animate-once">
+        <section className="w-full mr-20">
           <div className="pb-3 BorderB">
           <div className="BorderB px-4 py-2 flex items-center gap-3">
             <Image src='/icons/arrow-drop-down.svg' alt="arrow" width={24} height={24}/>
@@ -33,7 +33,7 @@ const Sidebar = () => {
             </li>
           ))}
           </ul>
-        </div>
+        </section>
       </section>
     )
   }

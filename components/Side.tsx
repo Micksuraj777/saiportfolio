@@ -8,7 +8,7 @@ const side = [
 
 const Side = () => {
   return (
-    <section className="p-4 h-[73vh] Border gap-4 flex w-fit flex-col animate-fade-right animate-once">
+    <section className="p-4  Border gap-4 flex w-fit flex-col animate-fade-right animate-once">
       {side.map(item => (
         <div key={item.alt}>
           <Image src={item.src} alt={item.alt} width={24} height={24} />

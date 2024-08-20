@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full h-12 background Border rounded-t-lg">
-      <div className="grid w-full h-full grid-cols-4 items-center container">
+      <div className="grid w-full h-full grid-cols-4 items-center">
         <div className="h-full pl-2 BorderR flex items-center">
           <Link href="/">
             <h1 className="Text">sai_prasad</h1>
