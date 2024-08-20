@@ -20,4 +20,7 @@
 .Border{
   @apply border border-[#607B96];
 }
+.background{
+  @apply bg-[#011627];
+}
 
