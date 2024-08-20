@@ -10,7 +10,7 @@ const Navbar = () => {
   const isAction = pathname === '/contact' || pathname.startsWith('/contact/');
 
   return (
-    <nav className="w-full h-[50px] absolute top-0 right-0 left-0 background Border">
+    <nav className="w-full h-12 background Border rounded-t-lg">
       <div className="grid w-full h-full grid-cols-4 items-center container">
         <div className="h-full pl-2 BorderR flex items-center">
           <Link href="/">
@@ -18,20 +18,17 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="h-full grid grid-flow-col auto-cols-max">
-          {navbarLinks.map((item) => {
+          {navbarLinks.map(item => {
             const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
 
             return (
               <Link
                 href={item.route}
                 key={item.label}
-                className={cn(
-                  'flex items-center px-4 justify-start BorderR',
-                  {
-                    'text-white border-b-4 border-b-[#FEA55F]': isActive,
-                    'Text': !isActive,
-                  }
-                )}
+                className={cn('flex items-center px-4 justify-start BorderR', {
+                  'text-white border-b-4 border-b-[#FEA55F]': isActive,
+                  Text: !isActive,
+                })}
               >
                 {item.label}
               </Link>
@@ -40,18 +37,15 @@ const Navbar = () => {
         </div>
         <div className="h-full BorderR"></div>
         <div
-          className={cn(
-            'h-full flex items-center justify-center',
-            {
-              'border-b-4 border-b-[#FEA55F]': isAction,
-            }
-          )}
+          className={cn('h-full flex items-center justify-center', {
+            'border-b-4 border-b-[#FEA55F]': isAction,
+          })}
         >
           <Link href="/contact">
             <h1
               className={cn({
                 'text-white': isAction,
-                'Text': !isAction,
+                Text: !isAction,
               })}
             >
               contact_us
