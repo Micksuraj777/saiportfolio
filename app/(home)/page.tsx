@@ -11,10 +11,10 @@ const page = () => {
         <h3 className='text-[#4D5BCE] text-3xl'>&gt; Full-Stack Developer</h3>
         <div>
           <p className='Text mt-6'>
-          <span className='text-gray-500'>//</span> complete the game to continue
+          <span className='text-gray-500'>##</span> complete the game to continue
           </p>
           <p className='Text'>
-          <span className='text-gray-500'>//</span> you can also see it on my Github page
+          <span className='text-gray-500'>##</span> you can also see it on my Github page
           </p>
           <p className='text-[#4D5BCE]'>const&nbsp;&nbsp;<span className='text-green-500'>githublink</span><span className='text-white'>&nbsp;&nbsp;=&nbsp;&nbsp;</span><a href="/" target="_blank" className='text-[#FEA55F]'>“https://github.com/example/url”</a></p>
         </div>
