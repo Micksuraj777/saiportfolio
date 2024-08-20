@@ -7,6 +7,11 @@ interface DropdownProps {
     img: string;
 }
 
+const drop = [
+  { src: '/icons/file.svg', alt: 'mail', cont: 'High School' },
+  { src: '/icons/file.svg', alt: 'phone', cont: 'University' }
+]
+
 const Dropdown: React.FC<DropdownProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,14 +34,12 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
       {isOpen && (
         <div className="mt-2 w-full animate-jump-in animate-once">
           <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-            <div className="Text flex justify-center gap-2 cursor-pointer" role="menuitem">
-              <Image src="/icons/file.svg" alt="arrow" width={18} height={18} />
-              <h2 className='Text'>High-school</h2>
-            </div>
-            <div className="flex justify-center gap-2 py-2 Text cursor-pointer" role="menuitem">
-            <Image src="/icons/file.svg" alt="arrow" width={18} height={18} />
-            <h2 className='Text'>University</h2>
-            </div>
+          {drop.map((item) => (
+            <li key={item.alt} className=' flex gap-2 pl-10 pt-2'>
+              <Image src={item.src} alt={item.alt} width={18} height={18} />
+              <h2 className="Text">{item.cont}</h2>
+            </li>
+          ))}
           </div>
         </div>
       )}
