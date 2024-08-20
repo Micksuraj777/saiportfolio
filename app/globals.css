@@ -2,25 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.firacode{
+.firacode {
   font-family: var(--firacode);
 }
 
-.BorderR{
+.BorderR {
   @apply border-r border-r-[#607B96];
 }
 
-.container{
+.container {
   @apply mx-auto max-w-[1500px];
 }
-.Text{
+.Text {
   @apply text-[#607B96];
 }
 
-.Border{
+.Border {
   @apply border border-[#607B96];
 }
-.background{
+
+.background {
   @apply bg-[#011627];
 }
 
+.hero-height {
+  height: calc(100vh - 180px);
+  width: 100%;
+}
