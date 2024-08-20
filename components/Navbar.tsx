@@ -10,8 +10,8 @@ const Navbar = () => {
   const isAction = pathname === '/contact' || pathname.startsWith('/contact/');
 
   return (
-    <nav className="container w-full h-[50px] absolute top-0 right-0 left-0 background Border">
-      <div className="grid w-full h-full grid-cols-4 items-center">
+    <nav className="w-full h-[50px] absolute top-0 right-0 left-0 background Border">
+      <div className="grid w-full h-full grid-cols-4 items-center container">
         <div className="h-full pl-2 BorderR flex items-center">
           <Link href="/">
             <h1 className="Text">sai_prasad</h1>

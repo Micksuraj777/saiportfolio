@@ -4,9 +4,11 @@ import React from 'react'
 
 const page = () => {
   return (
-    <section className='h-screen container pt-[50px] background flex'>
+    <section className='h-screen pt-[50px] background'>
+      <div className='container flex'>
       <Side/>
       <Sidebar/>
+      </div>
     </section>
   )
 }

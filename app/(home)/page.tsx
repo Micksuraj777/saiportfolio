@@ -3,8 +3,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <section className="w-full container h-screen bg-[#011627]">
-      <div className='flex justify-around items-center h-screen'>
+    <section className="w-full h-screen bg-[#011627]">
+      <div className='flex container justify-around items-center h-screen'>
       <div className='animate-fade-down animate-once animate-duration-[3000ms]'>
         <h1 className='text-white'>Hi all . I am</h1>
         <h2 className='text-7xl text-white tracking-wider'>Sai Prasad</h2>
