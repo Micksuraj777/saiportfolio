@@ -10,6 +10,10 @@
   @apply border-r border-r-[#607B96];
 }
 
+.BorderB{
+  @apply border-b border-b-[#607B96];
+}
+
 .container{
   @apply mx-auto max-w-[1500px];
 }
