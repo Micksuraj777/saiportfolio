@@ -19,7 +19,7 @@
 }
 
 .BorderB{
-  @apply border-b border-b-[#607B96];
+  @apply border-[#607B96] border-b-[1px];
 }
 
 .background {

@@ -99,8 +99,8 @@ const Projects = () => {
       : projects.filter(project => selectedProjects.has(project.title));
 
   return (
-    <div className="size-full flex background">
-      <section className="border border-[#607B96]  border-y-0 border-l-0 flex min-h-full w-96 flex-col animate-fade-left animate-once">
+    <div className="size-full background grid grid-cols-8">
+      <section className="border border-[#607B96] border-y-0 border-l-0 flex min-h-full col-span-2 flex-col animate-fade-left animate-once">
         <div
           className="text-white px-2 py-1 text-sm border-[#607B96] border-b-[1px] flex items-center justify-start cursor-pointer"
           onClick={() => isDrop(!drop)}
@@ -135,12 +135,10 @@ const Projects = () => {
           ))}
         </div>
       </section>
-      <section className="text-white flex-1 p-10">
-        <div className="grid grid-cols-3 items-center gap-y-10 justify-center">
-          {filteredProjects.map(project => (
-            <Card key={project.title} {...project} />
-          ))}
-        </div>
+      <section className="text-white p-5 xl:p-10 flex items-start justify-start overflow-y-auto col-span-6 flex-wrap gap-5 size-full">
+        {filteredProjects.map(project => (
+          <Card key={project.title} {...project} />
+        ))}
       </section>
     </div>
   );
