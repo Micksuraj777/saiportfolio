@@ -23,7 +23,7 @@ const About = () => {
     <section className="w-fit Border animate-fade-right animate-once">
       <section className="w-full h-full mr-10">
         <div className="BorderB">
-          <div className="BorderR w-fit h-fit flex justify-center items-center gap-1 p-2">
+          <div className="BorderR w-fit h-fit flex justify-center items-center gap-1 p-3">
             <h1 className="Text text-sm">personal-info</h1>
             <Image
               src="/icons/close-icon.svg"

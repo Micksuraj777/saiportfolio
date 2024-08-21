@@ -25,9 +25,9 @@ const Code = () => {
 
   return (
     <section className="w-fit animate-fade-right animate-once BorderR">
-      <div className="w-full Border h-[40px]"></div>
+      <div className="w-full Border h-[45px]"></div>
       <section className="mx-10">
-        <h1 className="Text pt-2 text-sm pb-7">## Code Snippet Showcase:</h1>
+        <h1 className="Text pt-2 text-sm pb-4">## Code Snippet Showcase:</h1>
         <div className="grid grid-cols-2 gap-4 items-center">
           <ul className="flex gap-2 items-center">
             <li>

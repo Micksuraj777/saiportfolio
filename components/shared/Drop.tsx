@@ -20,12 +20,11 @@ const Drop: React.FC<DropProps> = (props) => {
 
   useEffect(() => {
     const importDropData = async () => {
+      const dataModule = await import('@/lib/constants/index');
       if (props.type === 'contacts') {
-        const module = await import('@/lib/constants/index');
-        setDrop(module.contact);
+        setDrop(dataModule.contact);
       } else {
-        const module = await import('@/lib/constants/index');
-        setDrop(module.Links);
+        setDrop(dataModule.Links);
       }
     };
 
@@ -37,7 +36,7 @@ const Drop: React.FC<DropProps> = (props) => {
       <div>
         <button
           type="button"
-          className="bg-transparent flex text-white items-center gap-2 pl-6 pt-3 w-full BorderB pb-2"
+          className="bg-transparent flex text-white items-center gap-2 pl-6 py-3 w-full BorderB"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Image src='/icons/arrow-drop-down.svg' alt='' className={` ${isOpen ? 'transform -rotate-90' : ''}`} width={24} height={24} />
@@ -48,7 +47,7 @@ const Drop: React.FC<DropProps> = (props) => {
       </div>
 
       {isOpen && (
-        <div className="mt-2 w-full animate-jump-in animate-once">
+        <div className="pb-2 w-full animate-jump-in animate-once">
           <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {drop.map((item) => (
               <Link href="/" key={item.alt} className='flex gap-2 pl-10 pt-2 text-sm'>
