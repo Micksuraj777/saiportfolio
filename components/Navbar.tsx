@@ -10,7 +10,7 @@ const Navbar = () => {
   const isAction = pathname === '/contact' || pathname.startsWith('/contact/');
 
   return (
-    <nav className="w-full h-12 background Border rounded-t-lg grid grid-cols-4 items-center">
+    <nav className="w-full h-12 background Border rounded-t-lg grid grid-cols-[1fr,3fr,1fr,0.75fr] items-center">
       <div className="h-full pl-2 BorderR flex items-center">
         <Link href="/">
           <h1 className="Text">sai_prasad</h1>

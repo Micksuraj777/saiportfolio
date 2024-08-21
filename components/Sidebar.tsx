@@ -1,42 +1,38 @@
-import Image from "next/image"
-import Dropdown from "./shared/Dropdown"
-
-const contact = [
-  { src: '/icons/mail.svg', alt: 'mail', cont: '@usergmail.com' },
-  { src: '/icons/phone.svg', alt: 'phone', cont: '1234567890' }
-]
+"use client";
+import Image from 'next/image';
+import { useState } from 'react';
+import Dropdown from './shared/Dropdown';
+import Drop from './shared/Drop';
 
 const Sidebar = () => {
-    return (
-      <section className="Border gap-4 flex w-fit flex-col animate-fade-left animate-once">
-        <section className="w-full mr-20">
-          <div className="pb-3 BorderB">
-          <div className="BorderB px-4 py-2 flex items-center gap-3">
-            <Image src='/icons/arrow-drop-down.svg' alt="arrow" width={24} height={24}/>
-            <h1 className="text-white">personal-info</h1>
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  return (
+    <section className="Border gap-4 flex w-fit flex-col animate-fade-left animate-once">
+      <section className="w-full mr-20">
+        <div className=" BorderB">
+          <div className="px-4 py-2 flex BorderB items-center gap-3 cursor-pointer" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+            <Image
+              src="/icons/arrow-drop-down.svg"
+              alt="arrow"
+              width={20}
+              height={20}
+              className={`transform ${isDropdownOpen ? '-rotate-90' : ''}`}
+            />
+            <h2 className="text-white text-sm">personal-info</h2>
           </div>
-          <div className="flex flex-col">
-          <Dropdown title="bio" img="/icons/peech-fold.svg"/>
-          <Dropdown title="interests" img="/icons/green-fold.svg"/>
-          <Dropdown title="eduction" img="/icons/purple-fold.svg"/>
-          </div>
-          </div>
-          <div className="border-b border-b-[#607B96]  px-4 py-2 flex items-center gap-3">
-            <Image src='/icons/arrow-drop-down.svg' alt="arrow" width={24} height={24}/>
-            <h1 className="text-white">contact us</h1>
-          </div>
-          <ul>
-          {contact.map((item) => (
-            <li key={item.alt} className=' flex gap-2 pl-5 pt-2'>
-              <Image src={item.src} alt={item.alt} width={15} height={15} />
-              <h2 className="Text">{item.cont}</h2>
-            </li>
-          ))}
-          </ul>
-        </section>
+          {isDropdownOpen && (
+            <div className="flex flex-col animate-jump-in animate-once">
+              <Dropdown title="bio" img="/icons/peech-fold.svg" />
+              <Dropdown title="interests" img="/icons/green-fold.svg" />
+              <Dropdown title="education" img="/icons/purple-fold.svg" />
+            </div>
+          )}
+        </div>
+        <Drop title="Contacts" type="contacts" />
       </section>
-    )
-  }
-  
-  export default Sidebar
-  
+    </section>
+  );
+};
+
+export default Sidebar;

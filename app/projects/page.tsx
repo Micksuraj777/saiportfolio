@@ -102,7 +102,7 @@ const Projects = () => {
     <div className="size-full flex background">
       <section className="border border-[#607B96]  border-y-0 border-l-0 flex min-h-full w-96 flex-col animate-fade-left animate-once">
         <div
-          className="text-white px-2 py-1 border-[#607B96] border-b-[1px] flex items-center justify-start cursor-pointer"
+          className="text-white px-2 py-1 text-sm border-[#607B96] border-b-[1px] flex items-center justify-start cursor-pointer"
           onClick={() => isDrop(!drop)}
         >
           <Image
@@ -148,18 +148,18 @@ const Projects = () => {
 
 const Card = ({ ...data }: ProjectType) => {
   return (
-    <div className="space-y-3 col-span-1 mx-auto w-72">
+    <div className="space-y-3 col-span-1 mx-auto w-[90%]">
       <div className="text-[#607B96]">
-        <span className="font-semibold text-[#5565E8]">Project {projects.indexOf(data)} </span>
+        <span className="font-semibold text-[#5565E8] text-sm">Project {projects.indexOf(data)} </span>
         &#47;&#47; _<span>{data.title}</span>
       </div>
-      <div className="Border rounded-xl h-52 w-full min-h-fit relative">
+      <div className="Border rounded-xl h-36 w-full min-h-fit relative">
         <Image
           src={data.img}
           width={1500}
           height={1500}
           alt="sample"
-          className="w-full h-2/5 rounded-t-xl"
+          className="w-full h-2/4 rounded-t-xl"
         />
         <Image
           src={data.tech.img}
@@ -168,9 +168,9 @@ const Card = ({ ...data }: ProjectType) => {
           alt="sample"
           className="absolute top-2 right-2 size-8 rounded-sm"
         />
-        <div className="flex flex-col gap-2 w-full h-3/5 items-start justify-between min-h-fit p-3 border-[#607B96] border-t-[1px]">
-          <p className="text-wrap text-[#607B96]">{data.description}</p>
-          <Link className="bg-[#1C2B3A] w-fit p-2 rounded-lg cursor-pointer" href={data.href}>
+        <div className="flex flex-col gap-2 w-full h-3/5 items-start min-h-fit px-3 pb-4 pt-2 border-[#607B96] border-t-[1px]">
+          <p className="text-wrap text-[#607B96] text-[12px]">{data.description}</p>
+          <Link className="bg-[#1C2B3A] w-fit p-1 text-[12px] rounded-lg cursor-pointer" href={data.href}>
             view-project
           </Link>
         </div>
