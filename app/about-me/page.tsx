@@ -7,7 +7,7 @@ import React from 'react';
 const AboutMe = () => {
   return (
     <section className="background">
-      <section className="container flex hero-height">
+      <section className="container mx-auto flex hero-height">
         <div className="flex">
           <Side />
           <Sidebar />
