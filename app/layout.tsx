@@ -20,10 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fira_code.className}>
-      <body className="bg-black p-10 h-screen w-screen">
-        <div className='m-auto max-w-[1500px]'>
+      <body className="bg-black p-5 lg:p-10 h-screen w-screen flex">
+        <div className='m-auto max-w-[1500px] w-full flex flex-col'>
           <Navbar />
-          <main className="border border-[#607B96] border-y-0 hero-height">{children}</main>
+          <main className="border border-[#607B96] border-y-0 h-[calc(100vh-140px)] lg:h-[calc(100vh-180px)]">{children}</main>
           <Footer />
         </div>
       </body>

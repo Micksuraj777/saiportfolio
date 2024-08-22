@@ -12,13 +12,14 @@ const Navbar = () => {
   const [open, isOpen] = useState(false);
 
   return (
-    <nav className="w-full h-12 background Border rounded-t-lg grid grid-cols-[1fr,3fr,1fr,0.75fr] items-center">
-      <div className="h-full pl-2 BorderR flex items-center">
-        <Link href="/">
-          <h1 className="Text">sai_prasad</h1>
-        </Link>
-      </div>
-      <div className="h-full grid grid-flow-col auto-cols-max">
+    <nav className="w-full h-12 background Border rounded-t-lg grid grid-cols-8 items-center relative flex-none">
+      <Link
+        href="/"
+        className="col-span-2 pl-5 BorderR h-full Text hidden lg:flex items-center justify-start"
+      >
+        sai_prasad
+      </Link>
+      <div className="h-full hidden lg:grid grid-flow-col auto-cols-max col-span-5">
         {navbarLinks.map(item => {
           const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
           return (
@@ -68,9 +69,14 @@ const Navbar = () => {
         </button>
       </div>
       {open ? (
-        <div className="h-[79.85vh] w-full absolute top-12 background z-50 flex items-start justify-start flex-col">
+        <div className="h-[84.25vh] lg:h-[79.85vh] w-full absolute top-12 background z-50 flex items-start justify-start flex-col">
           {navbarLinks.map(item => (
-            <Link href={item.route} key={item.label} className="text-white BorderB w-full p-2 pl-5" onClick={() => isOpen(false)}>
+            <Link
+              href={item.route}
+              key={item.label}
+              className="text-white BorderB w-full p-2 pl-5"
+              onClick={() => isOpen(false)}
+            >
               {item.label}
             </Link>
           ))}
