@@ -100,7 +100,7 @@ const Projects = () => {
 
   return (
     <div className="size-full background grid grid-cols-8">
-      <section className="border border-[#607B96] border-y-0 border-l-0 flex min-h-full col-span-2 flex-col animate-fade-left animate-once">
+      <section className="border border-[#607B96] border-y-0 border-l-0 flex min-h-full col-span-3 lg:col-span-2 flex-col animate-fade-left animate-once">
         <div
           className="text-white px-2 py-1 text-sm border-[#607B96] border-b-[1px] flex items-center justify-start cursor-pointer"
           onClick={() => isDrop(!drop)}
@@ -135,7 +135,7 @@ const Projects = () => {
           ))}
         </div>
       </section>
-      <section className="text-white p-5 xl:p-10 flex items-start justify-start overflow-y-auto col-span-6 flex-wrap gap-5 size-full">
+      <section className="text-white p-5 xl:p-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 row-span-1 gap-10 items-start justify-start overflow-y-auto col-span-5 lg:col-span-6 flex-wrap size-full">
         {filteredProjects.map(project => (
           <Card key={project.title} {...project} />
         ))}
@@ -146,12 +146,12 @@ const Projects = () => {
 
 const Card = ({ ...data }: ProjectType) => {
   return (
-    <div className="space-y-3 col-span-1 mx-auto w-[90%]">
+    <div className="space-y-3 col-span-1 row-span-1 min-w-76 min-h-fit h-52">
       <div className="text-[#607B96]">
         <span className="font-semibold text-[#5565E8] text-sm">Project {projects.indexOf(data)} </span>
         &#47;&#47; _<span>{data.title}</span>
       </div>
-      <div className="Border rounded-xl h-36 w-full min-h-fit relative">
+      <div className="Border rounded-xl w-full h-full min-h-fit relative">
         <Image
           src={data.img}
           width={1500}
@@ -166,9 +166,9 @@ const Card = ({ ...data }: ProjectType) => {
           alt="sample"
           className="absolute top-2 right-2 size-8 rounded-sm"
         />
-        <div className="flex flex-col gap-2 w-full h-3/5 items-start min-h-fit px-3 pb-4 pt-2 border-[#607B96] border-t-[1px]">
-          <p className="text-wrap text-[#607B96] text-[12px]">{data.description}</p>
-          <Link className="bg-[#1C2B3A] w-fit p-1 text-[12px] rounded-lg cursor-pointer" href={data.href}>
+        <div className="flex flex-col gap-2 w-full h-3/5 items-start min-h-fit p-2 border-[#607B96] border-t-[1px]">
+          <p className="text-wrap text-[#607B96]">{data.description}</p>
+          <Link className="bg-[#1C2B3A] w-fit p-1 rounded-lg cursor-pointer" href={data.href}>
             view-project
           </Link>
         </div>
