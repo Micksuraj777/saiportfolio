@@ -146,18 +146,18 @@ const Projects = () => {
 
 const Card = ({ ...data }: ProjectType) => {
   return (
-    <div className="space-y-3 col-span-1 mx-auto w-[90%]">
+    <div className="space-y-3 col-span-1 mx-auto w-full">
       <div className="text-[#607B96]">
-        <span className="font-semibold text-[#5565E8] text-sm">Project {projects.indexOf(data)} </span>
+        <span className="font-semibold text-[#5565E8]">Project {projects.indexOf(data)} </span>
         &#47;&#47; _<span>{data.title}</span>
       </div>
-      <div className="Border rounded-xl h-36 w-full min-h-fit relative">
+      <div className="Border rounded-xl h-fit w-56 min-h-fit relative">
         <Image
           src={data.img}
           width={1500}
           height={1500}
           alt="sample"
-          className="w-full h-2/4 rounded-t-xl"
+          className="w-full h-2/6 rounded-t-xl"
         />
         <Image
           src={data.tech.img}
@@ -166,9 +166,9 @@ const Card = ({ ...data }: ProjectType) => {
           alt="sample"
           className="absolute top-2 right-2 size-8 rounded-sm"
         />
-        <div className="flex flex-col gap-2 w-full h-3/5 items-start min-h-fit px-3 pb-4 pt-2 border-[#607B96] border-t-[1px]">
-          <p className="text-wrap text-[#607B96] text-[12px]">{data.description}</p>
-          <Link className="bg-[#1C2B3A] w-fit p-1 text-[12px] rounded-lg cursor-pointer" href={data.href}>
+        <div className="flex flex-col gap-2 w-full h-3/5 items-start min-h-fit border-[#607B96] border-t-[1px] p-3">
+          <p className="text-wrap text-[#607B96]">{data.description}</p>
+          <Link className="bg-[#1C2B3A] w-fit p-1 rounded-lg cursor-pointer" href={data.href}>
             view-project
           </Link>
         </div>

@@ -45,7 +45,7 @@ const Contact = () => {
                 <div>
                   <h1 className="text-[#607B96] pb-2">_message</h1>
                   <textarea
-                    className="w-fit h-full py-1 px-5 border-2 border-[#607B96] bg-[#050e17] rounded-lg focus:outline-none text-[#607B96] mb-2"
+                    className="w-full h-full py-1 px-5 border-2 border-[#607B96] bg-[#050e17] rounded-lg focus:outline-none text-[#607B96] mb-2"
                   />
                 </div>
                 <div className="absolute bottom-[20%] left-[23%]">
