@@ -36,7 +36,7 @@ const Drop: React.FC<DropProps> = (props) => {
       <div>
         <button
           type="button"
-          className="bg-transparent flex text-white items-center gap-2 pl-6 py-3 w-full BorderB"
+          className="bg-transparent flex text-white items-center gap-2 pl-6 py-2 w-full BorderB"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Image src='/icons/arrow-drop-down.svg' alt='' className={` ${isOpen ? 'transform -rotate-90' : ''}`} width={24} height={24} />

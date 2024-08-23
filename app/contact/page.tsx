@@ -27,9 +27,9 @@ const Contact = () => {
             <Drop title="find-me-also-in" type="links" />
           </div>
           <div className="col-span-6 flex flex-col">
-            <div className="w-full h-fit border-y border-y-[#607B96] border-l border-l-[#607B96] mb-3 flex items-center">
-              <div className="border-r border-[#607B96] w-fit h-fit flex justify-center items-center gap-1 p-3">
-                <h1 className="text-sm text-[#607B96]">contacts</h1>
+            <div className="w-full h-fit border-b border-b-[#607B96] flex items-center">
+              <div className="border-r border-[#607B96] w-fit h-fit flex justify-center items-center gap-1 p-2">
+                <h1 className="text-[#607B96]">contacts</h1>
                 <Image
                   src="/icons/close-icon.svg"
                   alt="close"
@@ -43,14 +43,15 @@ const Contact = () => {
                 {isSubmitted ? (
                   <div className="flex justify-center items-center h-full w-full">
                     <div className="text-center">
-                      <h1 className="text-2xl text-[#607B96] mb-4">
-                        Thank you for your valuable information
-                      </h1>
+                      <h1 className="text-white text-2xl mb-3">Thank you!&#32;🤟</h1>
+                      <h2 className="text-[#607B96] mb-4">
+                      Your message has been accepted. You will recieve answer really soon!
+                      </h2>
                       <button
                         onClick={handleReturn}
                         className="bg-[#1C2B3A] text-white text-sm px-3 py-2 rounded-md"
                       >
-                        Return
+                        send-new-message
                       </button>
                     </div>
                   </div>
@@ -91,7 +92,7 @@ const Contact = () => {
                 )}
               </div>
               <div className="flex-1">
-                {/* <About /> */}
+                <About />
               </div>
             </div>
           </div>

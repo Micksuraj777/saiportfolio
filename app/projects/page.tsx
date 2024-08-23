@@ -135,7 +135,7 @@ const Projects = () => {
           ))}
         </div>
       </section>
-      <section className="text-white p-5 xl:p-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 row-span-1 gap-10 items-start justify-start overflow-y-auto col-span-5 lg:col-span-6 flex-wrap size-full">
+      <section className="text-white p-5 xl:p-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 row-span-1 gap-20 items-start justify-start overflow-y-auto col-span-5 lg:col-span-6 flex-wrap size-full">
         {filteredProjects.map(project => (
           <Card key={project.title} {...project} />
         ))}
@@ -157,7 +157,7 @@ const Card = ({ ...data }: ProjectType) => {
           width={1500}
           height={1500}
           alt="sample"
-          className="w-full h-2/6 rounded-t-xl"
+          className="w-full h-2/4 rounded-t-xl"
         />
         <Image
           src={data.tech.img}
@@ -166,8 +166,8 @@ const Card = ({ ...data }: ProjectType) => {
           alt="sample"
           className="absolute top-2 right-2 size-8 rounded-sm"
         />
-        <div className="flex flex-col gap-2 w-full h-3/5 items-start min-h-fit p-2 border-[#607B96] border-t-[1px]">
-          <p className="text-wrap text-[#607B96]">{data.description}</p>
+        <div className="flex flex-col gap-2 md:gap-5 md:py-3 md:px-5 w-full h-3/5 items-start min-h-fit p-2 border-[#607B96] border-t-[1px]">
+          <p className="text-wrap text-sm text-[#607B96]">{data.description}</p>
           <Link className="bg-[#1C2B3A] w-fit p-1 rounded-lg cursor-pointer" href={data.href}>
             view-project
           </Link>
