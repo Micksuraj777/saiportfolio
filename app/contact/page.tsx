@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <section className="background">
-      <section className="w-full hero-height container mx-auto">
+      <section className="w-full hero-height size-full">
         <div className="h-full grid grid-cols-8">
           <div className="border border-[#607B96] border-y-0 border-l-0 flex min-h-full col-span-2 flex-col">
             <div className="border-b border-[#607B96]">

@@ -166,7 +166,7 @@ const Card = ({ ...data }: ProjectType) => {
           alt="sample"
           className="absolute top-2 right-2 size-8 rounded-sm"
         />
-        <div className="flex flex-col gap-2 md:gap-5 md:py-3 md:px-5 w-full h-3/5 items-start min-h-fit p-2 border-[#607B96] border-t-[1px]">
+        <div className="flex flex-col gap-2  md:py-3 md:px-5 w-full h-3/5 items-start min-h-fit p-2 border-[#607B96] border-t-[1px]">
           <p className="text-wrap text-sm text-[#607B96]">{data.description}</p>
           <Link className="bg-[#1C2B3A] w-fit p-1 rounded-lg cursor-pointer" href={data.href}>
             view-project
