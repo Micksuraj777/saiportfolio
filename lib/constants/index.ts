@@ -13,6 +13,25 @@ export const navbarLinks = [
     },
 ];
 
+export const mobLinks = [
+  {   
+      label: '_hello',
+      route: '/',
+  },
+  {   
+      label: '_about-me',
+      route: '/about-me',
+  },
+  {   
+      label: '_projects',
+      route: '/projects',
+  },
+  {   
+    label: 'contact-me',
+    route: '/contact',
+},
+];
+
 export const contact: { src: string, alt: string, cont: string }[] = [
     { src: '/icons/mail.svg', alt: 'mail', cont: '@usergmail.com' },
     { src: '/icons/phone.svg', alt: 'phone', cont: '1234567890' }

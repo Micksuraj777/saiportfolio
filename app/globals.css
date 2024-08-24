@@ -30,3 +30,23 @@
   height: calc(100vh - 180px);
   width: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #011627;
+  border-radius: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #011627; 
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #011627;
+}

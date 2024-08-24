@@ -4,8 +4,8 @@ import Image from 'next/image';
 const Page = () => {
   return (
     <section className="size-full bg-[#011627] *:container *:mx-auto">
-      <div className="flex justify-evenly items-center size-full">
-        <div className="animate-fade-down animate-once animate-duration-[3000ms]">
+      <div className="flex justify-evenly items-center size-full bg-Blur md:bg-none">
+        <div className="animate-fade-down animate-once animate-duration-[3000ms] p-4">
           <h1 className="text-white text-sm">Hi all . I am</h1>
           <h2 className="text-5xl text-white tracking-wider">Sai Prasad</h2>
           <h3 className="text-[#4D5BCE] text-xl">&gt; Full-Stack Developer</h3>
@@ -16,13 +16,15 @@ const Page = () => {
             <p className="Text">
               <span className="text-gray-500 text-sm">&#47;&#47;</span> you can also see it on my Github page
             </p>
-            <p className="text-[#4D5BCE] text-sm">
+            <div className="text-[#4D5BCE] text-sm md:flex-row flex-col flex">
+              <div>
               const&nbsp;&nbsp;<span className="text-green-500">githublink</span>
               <span className="text-white">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+              </div>
               <a href="/" target="_blank" className="text-[#FEA55F]">
                 “https://github.com/example/url”
               </a>
-            </p>
+            </div>
           </div>
         </div>
         <div className="hidden md:block">

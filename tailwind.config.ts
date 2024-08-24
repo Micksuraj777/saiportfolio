@@ -8,13 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-dark-blue': '#011627',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "Blur":"url('/images/blur.svg')"
       },
     },
   },
-  plugins: [require('tailwindcss-animated')],
+  plugins: [require('tailwindcss-animated'),],
 };
 export default config;

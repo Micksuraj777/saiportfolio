@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navbarLinks } from '@/lib/constants/index';
+import { navbarLinks,mobLinks } from '@/lib/constants/index';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
       {open ? (
         <div className="h-[84.25vh] lg:h-[79.85vh] w-full absolute top-12 background z-50 flex items-start justify-start flex-col">
-          {navbarLinks.map(item => (
+          {mobLinks.map(item => (
             <Link
               href={item.route}
               key={item.label}

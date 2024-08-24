@@ -27,11 +27,11 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="background size-full hero-height">
-      <section className="grid grid-cols-8 min-h-full">
+    <section className="background size-full overflow-y-scroll flex-grow md:overflow-auto md:flex-grow-0">
+      <section className="md:grid md:grid-cols-8 md:min-h-full flex-col">
         {/* Side Section */}
         <div className="col-span-2 flex">
-          <div className="flex flex-col h-full">
+          <div className="md:flex flex-col h-full hidden">
             <section className="p-4 BorderR h-full gap-4 flex w-fit flex-col animate-fade-right animate-once">
               {side.map((item) => (
                 <div key={item.alt}>
@@ -40,8 +40,8 @@ const AboutMe = () => {
               ))}
             </section>
           </div>
-          <div className="flex-1">
-            <section className="flex-col h-full animate-fade-left animate-once">
+          <div className="flex-1 BorderR">
+            <section className="flex-col md:h-full h-fit animate-fade-left animate-once">
               <div className="BorderB">
                 <div
                   className="p-3 flex BorderB items-center gap-3 cursor-pointer"
@@ -73,10 +73,10 @@ const AboutMe = () => {
         {/* Sidebar Section */}
 
         {/* About Section */}
-        <div className="col-span-3 border-x border-x-[#607B96] animate-fade-right animate-once min-h-full flex flex-col">
+        <div className="col-span-3 BorderR animate-fade-right animate-once min-h-full flex flex-col">
           <section className="w-full flex-grow">
             <div className="BorderB">
-              <div className="BorderR w-fit h-fit flex justify-center items-center gap-1 p-3">
+              <div className="BorderR w-fit h-fit md:flex justify-center items-center gap-1 p-3 hidden">
                 <h1 className="Text text-sm">personal-info</h1>
                 <Image
                   src="/icons/close-icon.svg"
@@ -87,10 +87,11 @@ const AboutMe = () => {
               </div>
             </div>
             <ul className="p-4 text-sm flex-grow">
+              <h1 className="text-white pb-4">&#47;&#47;&nbsp;personal-info&nbsp;<span className="Text">&#47;&nbsp;bio</span></h1>
               {content.map((item, index = 1) => (
-                <li key={index} className="Text">
-                  {index + 1}
-                  <span className="pl-7">{item.cont}</span>
+                <li key={index} className="Text flex gap-10">
+                  <span>{index + 1}</span>
+                  <span className="text-left">{item.cont}</span>
                 </li>
               ))}
             </ul>
@@ -99,9 +100,9 @@ const AboutMe = () => {
 
         {/* Code Section */}
         <div className="col-span-3 BorderR animate-fade-right animate-once min-h-full flex flex-col">
-          <div className="w-full BorderB h-[45px]"></div>
-          <section className="p-10 h-[400px] overflow-y-scroll flex-grow">
-            <h1 className="Text pb-4">&#47;&#47; Code Snippet Showcase:</h1>
+          <div className="w-full BorderB h-[45px] hidden md:block"></div>
+          <section className="p-10 md:h-[400px] md:overflow-y-scroll md:flex-grow md:scrollbar-thumb-gray-600 md:scrollbar-track-custom-dark-blue">
+            <h1 className="text-white md:text-[#607B96] pb-4">&#47;&#47; Code Snippet Showcase:</h1>
             <div className="grid grid-cols-2 gap-4 items-center">
               <ul className="flex gap-2 items-center">
                 <li>
@@ -130,7 +131,7 @@ const AboutMe = () => {
                   />
                   Detail
                 </li>
-                <li className="Text flex items-center">
+                <li className="Text md:flex items-center hidden">
                   <Image
                     src="/icons/Star.svg"
                     alt="star"
@@ -185,7 +186,7 @@ const AboutMe = () => {
                   />
                   Detail
                 </li>
-                <li className="Text flex items-center">
+                <li className="Text md:flex items-center hidden">
                   <Image
                     src="/icons/Starh.svg"
                     alt="star"
