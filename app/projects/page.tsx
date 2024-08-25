@@ -75,11 +75,12 @@ const projects: ProjectType[] = [
     href: '#',
     img: '/images/sample.png',
   },
+
 ];
 
 const Projects = () => {
   const [selectedProjects, setSelectedProjects] = useState<Set<string>>(new Set());
-  const [drop, isDrop] = useState(true);
+  const [drop, setDrop] = useState(true);
 
   const toggleSelection = (title: string) => {
     setSelectedProjects(prev => {
@@ -99,18 +100,18 @@ const Projects = () => {
       : projects.filter(project => selectedProjects.has(project.title));
 
   return (
-    <div className="size-full background grid grid-cols-8">
+    <div className="md:size-full background md:grid md:grid-cols-8 flex-col h-fit">
       <section className="border border-[#607B96] border-y-0 border-l-0 flex min-h-full col-span-3 lg:col-span-2 flex-col animate-fade-left animate-once">
         <div
           className="text-white px-2 py-1 text-sm border-[#607B96] border-b-[1px] flex items-center justify-start cursor-pointer"
-          onClick={() => isDrop(!drop)}
+          onClick={() => setDrop(!drop)}
         >
           <Image
             src="./icons/arrow-drop-down.svg"
             width={1500}
             height={1500}
             alt="arrow"
-            className={`size-8 rounded-sm ${drop ? '' : '-rotate-90'}`}
+            className={`size-8 rounded-sm transition-transform duration-300 ${drop ? '' : '-rotate-90'}`}
           />
           Projects
         </div>
@@ -135,7 +136,11 @@ const Projects = () => {
           ))}
         </div>
       </section>
-      <section className="text-white p-5 xl:p-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 row-span-1 gap-20 items-start justify-start overflow-y-auto col-span-5 lg:col-span-6 flex-wrap size-full">
+      <section
+        className={`text-white p-5 xl:p-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 row-span-1 gap-20 items-start justify-start overflow-y-auto col-span-5 lg:col-span-6 flex-wrap md:size-full ${
+          drop ? 'h-[50vh]' : 'h-[80vh]'
+        }`}
+      >
         {filteredProjects.map(project => (
           <Card key={project.title} {...project} />
         ))}
@@ -147,8 +152,8 @@ const Projects = () => {
 const Card = ({ ...data }: ProjectType) => {
   return (
     <div className="space-y-3 col-span-1 row-span-1 min-w-76 min-h-fit h-52">
-      <div className="text-[#607B96]">
-        <span className="font-semibold text-[#5565E8]">Project {projects.indexOf(data)} </span>
+      <div className="text-[#607B96] text-sm">
+        <span className="font-semibold text-[#5565E8]">Project {projects.indexOf(data) + 1} </span>
         &#47;&#47; _<span>{data.title}</span>
       </div>
       <div className="Border rounded-xl w-full h-full min-h-fit relative">

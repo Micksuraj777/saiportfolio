@@ -9,7 +9,7 @@ const socialMedia = [
 
 const Footer = () => {
   return (
-    <footer className="w-full h-12 min-h-fit background Border rounded-b-lg grid grid-cols-8 flex-none">
+    <footer className="w-full h-12 min-h-fit background Border rounded-b-lg grid grid-cols-8 flex-none sticky bottom-0">
       <div className="col-span-8 lg:col-span-2 flex items-center justify-end lg:justify-center gap-1">
         <h1 className="Text border-r border-[#607B96] h-full flex items-center justify-center px-2 min-w-fit text-nowrap">
           find me in :

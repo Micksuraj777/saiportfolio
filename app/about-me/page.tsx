@@ -99,9 +99,9 @@ const AboutMe = () => {
         </div>
 
         {/* Code Section */}
-        <div className="col-span-3 BorderR animate-fade-right animate-once min-h-full flex flex-col">
+        <div className="col-span-3 animate-fade-right animate-once min-h-full flex flex-col">
           <div className="w-full BorderB h-[45px] hidden md:block"></div>
-          <section className="p-10 md:h-[400px] md:overflow-y-scroll md:flex-grow md:scrollbar-thumb-gray-600 md:scrollbar-track-custom-dark-blue">
+          <section className="p-10 md:h-[400px] md:overflow-y-scroll md:flex-grow">
             <h1 className="text-white md:text-[#607B96] pb-4">&#47;&#47; Code Snippet Showcase:</h1>
             <div className="grid grid-cols-2 gap-4 items-center">
               <ul className="flex gap-2 items-center">

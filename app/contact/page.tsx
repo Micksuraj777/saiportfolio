@@ -17,17 +17,18 @@ const Contact = () => {
   };
 
   return (
-    <section className="background">
-      <section className="w-full hero-height size-full">
-        <div className="h-full grid grid-cols-8">
-          <div className="border border-[#607B96] border-y-0 border-l-0 flex min-h-full col-span-2 flex-col">
-            <div className="border-b border-[#607B96]">
+    <section className="background size-full">
+      <section className="w-full h-full">
+        <div className="md:h-full h-fit md:grid md:grid-cols-8 flex-col">
+          <h1 className="md:hidden text-white p-3">_contact-me</h1>
+          <div className="md:border-r md:border-[#607B96] border-r-0 border-y-0 border-l-0 flex min-h-full col-span-2 flex-col">
+            <div className="border-y border-y-[#607B96]">
               <Drop title="Contacts" type="contacts" />
             </div>
             <Drop title="find-me-also-in" type="links" />
           </div>
           <div className="col-span-6 flex flex-col">
-            <div className="w-full h-fit border-b border-b-[#607B96] flex items-center">
+            <div className="w-full h-fit border-b border-b-[#607B96] md:flex hidden items-center">
               <div className="border-r border-[#607B96] w-fit h-fit flex justify-center items-center gap-1 p-2">
                 <h1 className="text-[#607B96]">contacts</h1>
                 <Image
@@ -39,9 +40,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex-1 flex">
-              <div className="p-10 border-r border-r-[#607B96] flex flex-col justify-start flex-1">
+              <div className="p-10 flex flex-col justify-start flex-1">
                 {isSubmitted ? (
-                  <div className="flex justify-center items-center h-full w-full">
+                  <div className="flex justify-center items-center md:h-full h-[50vh] w-full">
                     <div className="text-center">
                       <h1 className="text-white text-2xl mb-3">Thank you!&#32;🤟</h1>
                       <h2 className="text-[#607B96] mb-4">
@@ -76,7 +77,7 @@ const Contact = () => {
                     <div>
                       <h1 className="text-[#607B96] pb-2">_message:</h1>
                       <textarea
-                        className="w-full h-full py-2 px-3 bg-[#050e17] rounded-lg focus:outline-[#607B96] text-[#607B96] mb-2"
+                        className="w-full h-28 py-2 px-3 bg-[#050e17] rounded-lg focus:outline-[#607B96] text-[#607B96] mb-2"
                         required
                       />
                     </div>
@@ -91,7 +92,7 @@ const Contact = () => {
                   </form>
                 )}
               </div>
-              <div className="flex-1">
+              <div className="flex-1 hidden lg:block">
                 <About />
               </div>
             </div>
